@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
 
-# Simple Calendar
-gem "simple_calendar", "~> 2.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
