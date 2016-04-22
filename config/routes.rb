@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
+
   root 'welcome#homepage'
   
   get 'signup' => 'users#new'
   get 'welcome/homepage'
+
+  resources :users
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
