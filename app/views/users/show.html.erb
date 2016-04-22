@@ -54,7 +54,7 @@
                 <div class="col-md-3 col-sm-3">
                                        
                     <div class="user-wrapper">
-                        <img src="../assets/profile1.jpg" class="img-responsive" /> 
+                        <%=gravatar_for @user%>
                     <div class="description">
                        <h4><%= @user.name %> <%= @user.email %></h4>
                         <h5> <strong> Website Designer </strong></h5>
