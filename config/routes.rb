@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
-  get 'users/show'
-
   root 'welcome#homepage'
-  
+
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+  get 'users/show'
   get 'signup' => 'users#new'
+  
   get 'welcome/homepage'
 
   resources :users
