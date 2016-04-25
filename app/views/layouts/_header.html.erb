@@ -1,6 +1,8 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "ConnectYou", root_path, id: "logo" %>
+    <%= link_to image_tag("calendar-icon-small.png", alt: "Connect You"),
+                'https://connectyouapp.herokuapp.com/' , id: "logo"%>
+    <%= link_to "Connect You", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
