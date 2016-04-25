@@ -64,8 +64,12 @@
           
               	<div class="field-wrap">
             	  <%= f.label :password %>
-				  <%= f.password_field :password%>
+				        <%= f.password_field :password%>
                 </div>
+                  <%= f.label :remember_me, class: "checkbox inline" do %>
+                    <%= f.check_box :remember_me %>
+                    <span>Remember Me!</span>
+                  <% end %>
                 <%= f.submit "Log in", class: "btn btn-primary" %>
               <% end %>
           	</div>
