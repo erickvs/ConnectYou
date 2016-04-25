@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  locationId: 1
+  time: 2016-04-25 01:35:48
+  description: MyText
+  owner: 
+
+two:
+  name: MyString
+  locationId: 1
+  time: 2016-04-25 01:35:48
+  description: MyText
+  owner: 

@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
 
+  ### DB Relationships
+  has_one :address
+  ###
+
   attr_accessor :remember_token
 
   before_save { self.email = email.downcase }
