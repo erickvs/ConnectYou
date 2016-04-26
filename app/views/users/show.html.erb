@@ -7,13 +7,13 @@
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title>Bootstrap User Profile Template </title>
+    <title> <%=@user.name%>'s Profile </title>
     <!-- BOOTSTRAP STYLE SHEET -->
     <link href="assets/profile_bootstrap.css" rel="stylesheet" />
      <!-- FONT AWESOME ICONS STYLE SHEET -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="assets/font-awesome.css" rel="stylesheet" />
     <!-- CUSTOM STYLES -->
-     <link href="assets/profile_style.css" rel="stylesheet" />
+    <link href="assets/profile_style.css" rel="stylesheet" />
 </head>
 <body >
     <div class="navbar navbar-default"> 
@@ -39,15 +39,6 @@
     <!-- NAVBAR CODE END -->
     <div class="container">
         <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2>Bootstrap User Profile Template</h2>
-
-                   
-                Crafted by <a href="http://www.designbootstrap.com/" target="_blank" >DesignBootstrap</a>
-                    <br />
-                    <br />
-                    
-                </div>
             </div>
          <!-- USER PROFILE ROW STARTS-->
             <div class="row">
@@ -56,37 +47,33 @@
                     <div class="user-wrapper">
                         <%=gravatar_for @user%>
                     <div class="description">
-                       <h4><%= @user.name %> <%= @user.email %></h4>
-                        <h5> <strong> Website Designer </strong></h5>
-                        <p>
-                            Pellentesque elementum dapibus convallis. 
-                        </p>
-                        <hr />
-                        <a href="#" class="btn btn-danger btn-sm"> <i class="fa fa-user-plus" ></i> &nbsp;Profile + </a> 
+                       <h4><%= @user.name %> 
+                       <p><%= @user.email %></p>
+                       </h4>
+                       <h5> <strong>Software Engineer</strong></h5>
+                       <p>
+                         Hey what's up!? Message me to hangout or something :P
+                       </p>
+                       <hr />
+                       <a href="#" class="btn btn-danger btn-sm"> <i class="fa fa-user-plus" ></i> &nbsp;Follow me!</a> 
                     </div>
-                     </div>
+                    </div>
                 </div>
                 
                 <div class="col-md-9 col-sm-9  user-wrapper">
                     <div class="description">
-                         <h3> Ramolin's Biography : </h3>
+                    <hr>
+                    <h3> Schedule </h3>
+                      <%= calendar number_of_days: 31 do |date| %>
+                        <%= date %>
+                      <% end %>
                     <hr />
-                     <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                          Aliquam suscipit egestas eros, ut maximus magna blandit ut. 
-                         Suspendisse vel molestie sapien.
-                          Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-                         Fusce sit amet egestas dui, vitae tincidunt justo. 
-                         </p>
-                    <p>
-                         Etiam eleifend massa congue magna pretium, id blandit dui pulvinar. 
-                         Nam et pulvinar risus, vel blandit risus.
-                          Maecenas tristique volutpat ante, aliquet hendrerit felis aliquet nec.
-                          Curabitur rutrum tincidunt erat, ac feugiat libero gravida ac. 
-                         Suspendisse ut varius quam, vitae rutrum metus. 
-                        </p>   
-                    <h3> Social Links: </h3>
-                    <hr />                
+                          
+                    </hr>
+                    <h3> My Information: </h3>
+                      <p> I'm pretty much free all the time because I dropped out of school! :) </p>
+                    <hr />    
+                    <h3> Social Links: </h3>            
                    <a href="#" class="btn btn-social btn-facebook">
                             <i class="fa fa-facebook"></i>&nbsp; Facebook </a>
 

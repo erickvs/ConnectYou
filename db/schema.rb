@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160425083547) do
     t.integer  "locationId"
     t.datetime "time"
     t.text     "description"
-    t.integer  "owner"
+    t.integer  "owner",       null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
