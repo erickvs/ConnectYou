@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :events
   root 'welcome#homepage'
 
   get 'login' => 'sessions#new'

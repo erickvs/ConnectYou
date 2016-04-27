@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160425083547) do
+ActiveRecord::Schema.define(version: 20160427005301) do
 
   create_table "addresses", force: :cascade do |t|
     t.string   "street"
@@ -24,12 +24,9 @@ ActiveRecord::Schema.define(version: 20160425083547) do
 
   create_table "events", force: :cascade do |t|
     t.string   "name"
-    t.integer  "locationId"
-    t.datetime "time"
-    t.text     "description"
-    t.integer  "owner",       null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "start_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "locations", force: :cascade do |t|
@@ -47,6 +44,7 @@ ActiveRecord::Schema.define(version: 20160425083547) do
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
     t.string   "remember_digest"
+    t.text     "bio"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

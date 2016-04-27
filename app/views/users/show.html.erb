@@ -31,6 +31,7 @@
                     <li><a href="#home">HOME</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#contact">CONTACT</a></li>
+                    <li><%= link_to "Log out", logout_path, method: "delete" %></li>
                 </ul>
             </div>
 
@@ -62,16 +63,29 @@
                 
                 <div class="col-md-9 col-sm-9  user-wrapper">
                     <div class="description">
-                    <hr>
                     <h3> Schedule </h3>
-                      <%= calendar number_of_days: 31 do |date| %>
+                    <hr>
+                    <h3> Calendar </h3>
+                      <% if @events %>
+                        <%= month_calendar events: @events do |date, events| %>
+                          <%= date %>
+
+                          <% events.each do |event| %>
+                            <div>
+                              <%= event.name %>
+                            </div>
+                          <% end %>
+                        <% end %>
+                      <% else %>
+                        <%= month_calendar do |date| %>
                         <%= date %>
+                        <% end %>
                       <% end %>
                     <hr />
                           
                     </hr>
                     <h3> My Information: </h3>
-                      <p> I'm pretty much free all the time because I dropped out of school! :) </p>
+                      <p> I'm pretty much free all the time because I dropped out of school! :) Don't do this, kids.</p>
                     <hr />    
                     <h3> Social Links: </h3>            
                    <a href="#" class="btn btn-social btn-facebook">

@@ -2,14 +2,8 @@
 
 one:
   name: MyString
-  locationId: 1
-  time: 2016-04-25 01:35:48
-  description: MyText
-  owner: 
+  start_time: 2016-04-26 16:13:38
 
 two:
   name: MyString
-  locationId: 1
-  time: 2016-04-25 01:35:48
-  description: MyText
-  owner: 
+  start_time: 2016-04-26 16:13:38
