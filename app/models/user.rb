@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
   ### DB Relationships
   has_one :address
+  has_many :event
   ###
 
   attr_accessor :remember_token
