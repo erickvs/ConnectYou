@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   ### DB Relationships
   has_one :address
-  has_many :event
+  has_many :events, dependent: :destroy
   ###
 
   attr_accessor :remember_token
