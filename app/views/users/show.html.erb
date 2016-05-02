@@ -5,8 +5,22 @@
     // page is now ready, initialize the calendar...
 
     $('#calendar').fullCalendar({
-      // put your options and callbacks here
-    })
+      header: {
+        left: 'month,agendaWeek,agendaDay',
+        center: 'title'
+
+      }, // buttons for switching between views
+
+      views: {
+        month: { // name of view
+          //titleFormat: 'YYYY, MM, DD'
+          // other view-specific options here
+        },
+        agendaWeek: {
+
+        }
+      }
+    });
 
   });
 </script>
@@ -35,3 +49,4 @@
     <%= render 'shared/calendar' %>
   </div>
 </div>
+
