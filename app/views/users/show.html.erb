@@ -70,7 +70,7 @@
                     
                       <% if @events %>
                         <%= month_calendar events: @events do |date, events| %>
-                          <%= date %>
+                          <%= date.day %>
 
                           <% events.each do |event| %>
                             <div>
@@ -80,7 +80,7 @@
                         <% end %>
                       <% else %>
                         <%= month_calendar do |date| %>
-                        <%= date %>
+                        <%= date.day %>
                         <% end %>
                       <% end %>
                     
