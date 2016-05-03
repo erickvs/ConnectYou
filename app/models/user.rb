@@ -44,5 +44,10 @@ class User < ActiveRecord::Base
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+  # Get all user's events
+  def feed
+    Event.where("user_id = ?", id)
+  end
   
 end

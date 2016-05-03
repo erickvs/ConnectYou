@@ -61,14 +61,13 @@
                     </div>
                     </div>
                 </div>
-                
+               
                 <div class="col-md-9 col-sm-9  user-wrapper">
                     <div class="description">
                     <h3> Schedule </h3>
                     <hr>
                     <h3> Calendar </h3>
-                    
-                      <% if @events %>
+                      <% if @events = @user.feed %>
                         <%= month_calendar events: @events do |date, events| %>
                           <%= date.day %>
 
@@ -79,8 +78,8 @@
                           <% end %>
                         <% end %>
                       <% else %>
-                        <%= month_calendar do |date| %>
-                        <%= date.day %>
+                      <%= month_calendar do |date| %>
+                          <%= date.day %>
                         <% end %>
                       <% end %>
                     
