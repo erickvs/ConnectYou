@@ -14,6 +14,7 @@
     <link href="assets/font-awesome.css" rel="stylesheet" />
     <!-- CUSTOM STYLES -->
     <link href="assets/profile_style.css" rel="stylesheet" />
+    <link href="assets/simple_calendar.scss" rel="stylesheet" />
 </head>
 <body >
     <div class="navbar navbar-default"> 
@@ -66,6 +67,7 @@
                     <h3> Schedule </h3>
                     <hr>
                     <h3> Calendar </h3>
+                    
                       <% if @events %>
                         <%= month_calendar events: @events do |date, events| %>
                           <%= date %>
@@ -81,6 +83,7 @@
                         <%= date %>
                         <% end %>
                       <% end %>
+                    
                     <hr />
                           
                     </hr>
