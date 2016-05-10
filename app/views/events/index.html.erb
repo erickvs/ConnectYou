@@ -1,25 +1,35 @@
-<div id="demo">
-  <h1>Events</h1>
-  
-  <!-- Responsive table starts here -->
-  <!-- For correct display on small screens you must add 'data-title' to each 'td' in your table -->
-  <div class="table-responsive-vertical shadow-z-1">
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Events</title> 
+    <link rel="stylesheet" href="assets/resetStyle.css">
+    <link rel="stylesheet" href="assets/eventStyle.css">
+  </head>
 
-  <!-- New Event -->
-  <%= link_to 'New Event', new_event_path %>
-  <!-- Table starts here -->
-  <table id="table" class="table table-hover table-mc-light-blue">
-      <thead>
+  <body>
+
+<h1>Events</h1>  
+<div  class="tbl-header">
+<table cellpadding="0" cellspacing="0" border="0">
+  <thead>
         <tr>
+          <th>User ID</th>
+          <th>User</th>
           <th>Name</th>
           <th>Location</th>
           <th>Start Time</th>
           <th>Event Time</th>
         </tr>
       </thead>
-      <tbody>
+</table>
+</div>
+<div  class="tbl-content">
+<table cellpadding="0" cellspacing="0" border="0">
+  <tbody>
     <% @events.each do |event| %>
       <tr>
+        <td><%= event.user_id %></td>
         <td><%= event.name %></td>
         <td><%= event.start_time %></td>
         <td><%= link_to 'Show', event %></td>
@@ -28,6 +38,11 @@
       </tr>
     <% end %>
   </tbody>
-    </table>
-  </div>
+</table>
 </div>
+<%= link_to 'New Event', new_event_path %>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="assets/eventIndex.js"></script>
+  </body>
+</html>
