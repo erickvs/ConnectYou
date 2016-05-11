@@ -292,3 +292,85 @@ span.picture {
     border: 0;
   }
 }
+
+/* Simple Calendar */
+.simple-calendar {
+  table {
+    -webkit-border-horizontal-spacing: 0px !important;
+    -webkit-border-vertical-spacing: 0px !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: 1px solid rgb(221, 221, 221) !important;
+    border-collapse: collapse !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  tr {
+    border-collapse: collapse !important;
+  }
+
+  th {
+    padding: 6px !important;
+    border-bottom: 2px solid rgb(221, 221, 221) !important;
+    border-collapse: collapse !important;
+    border-left: 1px solid rgb(221, 221, 221) !important;
+    border-right: 1px solid rgb(221, 221, 221) !important;
+    border-top: 0px none rgb(51, 51, 51) !important;
+    box-sizing: border-box !important;
+    text-align: left!important;
+  }
+
+  td {
+    padding: 6px !important;
+    vertical-align: top !important;
+    width: 14% !important;
+
+    border: 1px solid #ddd !important;
+    border-top-color: rgb(221, 221, 221) !important;
+    border-top-style: solid !important;
+    border-top-width: 1px !important;
+    border-right-color: rgb(221, 221, 221) !important;
+    border-right-style: solid !important;
+    border-right-width: 1px !important;
+    border-bottom-color: rgb(221, 221, 221) !important;
+    border-bottom-style: solid !important;
+    border-bottom-width: 1px !important;
+    border-left-color: rgb(221, 221, 221) !important;
+    border-left-style: solid !important;
+    border-left-width: 1px !important;
+  }
+
+  .day {
+    height: 80px !important;
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+    background: #FFFFC0 !important;
+  }
+
+  .past {}
+  .future {}
+
+  .start-date {
+
+  }
+
+  .prev-month {
+    background: #DDD !important;
+  }
+  .next-month {
+    background: #DDD !important;
+  }
+  .current-month {}
+
+  .has-events {}
+}

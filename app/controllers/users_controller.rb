@@ -6,9 +6,11 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(page: params[:page])
+
   end
 
   def show
+    @meetings = Meeting.all
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
   end
