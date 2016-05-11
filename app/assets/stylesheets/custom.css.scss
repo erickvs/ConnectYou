@@ -294,6 +294,9 @@ span.picture {
 }
 
 /* Simple Calendar */
+
+
+
 .simple-calendar {
   table {
     -webkit-border-horizontal-spacing: 0px !important;
@@ -343,6 +346,8 @@ span.picture {
 
   .day {
     height: 80px !important;
+    font-size: large !important;
+    color: #2E2F30 !important;
   }
 
   .wday-0 {}
@@ -355,22 +360,35 @@ span.picture {
 
   .today {
     background: #FFFFC0 !important;
+    color: crimson !important;
   }
 
-  .past {}
-  .future {}
+  .past {
+
+  }
+  .future {
+
+  }
 
   .start-date {
-
   }
 
   .prev-month {
-    background: #DDD !important;
+    background: #2E2F30 !important;
+    color: white !important;
+    font-size: small !important;
   }
   .next-month {
-    background: #DDD !important;
+    background: #2E2F30 !important;
+    color: white !important;
+    font-size: small !important;
   }
-  .current-month {}
+  .current-month {
+  }
 
-  .has-events {}
+  .has-events {
+    background: #730E15 !important;
+    color: white !important;
+    font-size: small !important;
+  }
 }

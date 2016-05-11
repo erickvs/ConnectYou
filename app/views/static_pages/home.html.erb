@@ -15,8 +15,11 @@
       </aside>
       <div class="col-md-8">
         <!-- Calendar goes here! -->
-        <h3>Calendar</h3>
+        <h4>Calendar</h4>
         <%= render 'shared/calendar' %>
+        <h4 class="new-event-button">
+        <%= link_to 'New Event', new_meeting_path %>
+        </h4>
         <!-- Calendar ends here! -->
       </div>
     </div>
