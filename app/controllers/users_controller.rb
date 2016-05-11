@@ -10,8 +10,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @meetings = Meeting.all
+    #@events = current_user.events if logged_in?
     @user = User.find(params[:id])
+    @events = @user.events
     @microposts = @user.microposts.paginate(page: params[:page])
   end
 
