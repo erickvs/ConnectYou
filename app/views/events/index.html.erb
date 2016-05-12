@@ -1,8 +1,11 @@
+<div id="demo">
+<div class="table-responsive-vertical shadow-z-1">
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Events</h1>
 
-<table>
+<table id="table" class="table table-hover table-mc-light-blue">
   <thead>
     <tr>
       <th>Name</th>
@@ -17,7 +20,7 @@
       <tr>
         <td><%= event.name %></td>
         <td><%= event.start_time %></td>
-        <td><%= event.user %></td>
+        <td><%= event.user.name %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,3 +32,6 @@
 <br>
 
 <%= link_to 'New Event', new_event_path %>
+
+</div>
+</div>
